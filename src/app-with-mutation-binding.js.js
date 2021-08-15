@@ -21,7 +21,7 @@ async function requestUpdateUsername(newName) {
     .then((json) => console.log(json));
 }
 
-export default function App() {
+export default function AppWithMutationBinding() {
   const { data, mutate } = useSWR("http://localhost:4000/users/1", fetcher);
 
   return (
