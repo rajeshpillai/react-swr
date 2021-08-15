@@ -8,6 +8,8 @@ export default function NavBar() {
   return (
     <ul className="navbar">
       <li><Link to="/app-with-mutation-binding">Mutation(Binding)</Link></li>
+      <li><Link to="/pagination">Pagination</Link></li>
+
     </ul>
   );
 }

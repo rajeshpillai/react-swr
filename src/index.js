@@ -9,6 +9,7 @@ import {
 
 import AppWithMutationBinding from "./app-with-mutation-binding.js";
 import NavBar from './components/navbar';
+import PaginationDemo from "./pagination-demo";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -19,6 +20,9 @@ ReactDOM.render(
       <Switch>
         <Route path="/app-with-mutation-binding" exact>
           <AppWithMutationBinding />
+        </Route>
+        <Route path="/pagination" exact>
+          <PaginationDemo />
         </Route>
       </Switch>
       </Router>
