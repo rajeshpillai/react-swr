@@ -1,4 +1,13 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  color: gainsboro;
+}
+
+.main {
+
 }
