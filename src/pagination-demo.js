@@ -10,7 +10,8 @@ export default function PaginationDemo() {
       `https://jsonplaceholder.typicode.com/posts?_limit=${PAGE_SIZE}&_page=${
         index + 1
       }`,
-    fetcher
+    fetcher,
+    { revalidateAll: false }
   );
 
   const posts = data ? [].concat(...data) : [];
@@ -43,6 +44,20 @@ export default function PaginationDemo() {
         </button>
         <button disabled={!size} onClick={() => setSize(0)}>
           clear
+        </button>
+        <button
+          onClick={() => {
+            setSize(size - 1);
+          }}
+        >
+          Previous {size - 1}
+        </button>
+        <button
+          onClick={() => {
+            setSize(size + 1);
+          }}
+        >
+          Next {size + 1}
         </button>
       </p>
       {isEmpty ? <p>Yay, no issues found.</p> : null}

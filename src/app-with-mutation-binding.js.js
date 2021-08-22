@@ -11,11 +11,11 @@ async function requestUpdateUsername(newName) {
   fetch("http://localhost:4000/users/1", {
     method: "PATCH",
     body: JSON.stringify({
-      name: newName.toUpperCase()
+      name: newName.toUpperCase(),
     }),
     headers: {
-      "Content-type": "application/json; charset=UTF-8"
-    }
+      "Content-type": "application/json; charset=UTF-8",
+    },
   })
     .then((response) => response.json())
     .then((json) => console.log(json));
